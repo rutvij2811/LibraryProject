@@ -1,5 +1,5 @@
 package lib;
 
-public abstract class Member {
+public class Member {
 
 }
