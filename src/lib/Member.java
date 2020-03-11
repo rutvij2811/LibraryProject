@@ -2,7 +2,7 @@ package lib;
 
 import java.util.LinkedList;
 
-public class Member {
+public class Member{
 	String name;
 	int memId;
 	LinkedList<Book> issuedBooks;
