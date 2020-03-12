@@ -42,4 +42,24 @@ public class Main {
 			}
 		}
 	}
+
+	private static void checkDues() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void addMember() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void issueBooks() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void issueBook() {
+		// TODO Auto-generated method stub
+		
+	}
 }
