@@ -5,7 +5,7 @@ import java.util.Date;
 public class Book {
 
 	String isbnNumber;
-	String name,author;
+	String name, author;
 	int yearOfPublishing;
 	boolean issued;
 	Date returnDeadline;

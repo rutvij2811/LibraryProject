@@ -2,8 +2,8 @@ package lib;
 
 import java.util.List;
 
-public class Library{
-	
+public class Library {
+
 	public boolean issueBook(Book book) {
 		book.issued = true;
 		if (book.issued) {
@@ -26,7 +26,7 @@ public class Library{
 	// TODO : some method to retrieve list of mem_ID from the database;
 	private boolean checkMemberId(Member mem) {
 		List<Integer> memList = null;// Some code to retrieve memId from DB
-		if(memList.contains(mem.memId)) {
+		if (memList.contains(mem.memId)) {
 			return true;
 		}
 		return false;
