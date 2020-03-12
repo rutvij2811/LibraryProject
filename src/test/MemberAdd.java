@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import lib.Member;
 
 public class MemberAdd {
-	public static void main(String[] args) throws IOException {
+	public static void addMembers() throws IOException {
 		LinkedList<Member> members = new LinkedList<>();
 		members.add(new Member(1000,"MEM1",3,null));
 		members.add(new Member(1001,"MEM2",2,null));
@@ -27,9 +27,10 @@ public class MemberAdd {
 		try {
 			fileOutputStream = new FileOutputStream("..\\LibraryProject\\res\\member.ser");
 			objectOutputStream = new ObjectOutputStream(fileOutputStream);
-			for(Member mem: members) {
-				objectOutputStream.writeObject(mem);
-			}
+//			for(Member mem: members) {
+//				objectOutputStream.writeObject(mem);
+//			}
+			objectOutputStream.writeObject(members);
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

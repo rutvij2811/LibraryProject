@@ -9,19 +9,21 @@ import java.util.LinkedList;
 import lib.Member;
 
 public class ViewMembers {
-	public static void main(String[] args) throws IOException {
+	private static ObjectInputStream objectInputStream;
+
+	public static void initMembers(LinkedList<Member> members) throws IOException {
 		FileInputStream fileInputStream;
-		ObjectInputStream objectInputStream = null;
+		objectInputStream = null;
 		try {
 			fileInputStream = new FileInputStream("..\\LibraryProject\\res\\member.ser");
 			objectInputStream = new ObjectInputStream(fileInputStream);
-			LinkedList<Member> members = (LinkedList<Member>) objectInputStream.readObject();
+			members = ((LinkedList<Member>) objectInputStream.readObject());
 			for(Member mem : members) {
 				System.out.println(mem);
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
