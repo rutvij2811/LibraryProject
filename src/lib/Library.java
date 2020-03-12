@@ -24,11 +24,11 @@ public class Library {
 	}
 
 	// TODO : some method to retrieve list of mem_ID from the database;
-	private boolean checkMemberId(Member mem) {
-		List<Integer> memList = null;// Some code to retrieve memId from DB
-		if (memList.contains(mem.memId)) {
-			return true;
-		}
-		return false;
-	}
+//	private boolean checkMemberId(Member mem) {
+//		List<Integer> memList = null;// Some code to retrieve memId from DB
+//		if (memList.contains(mem.memId)) {
+//			return true;
+//		}
+//		return false;
+//	}
 }
