@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class DBTest {
 
-	private static final String dbURL = "jdbc:oracle:thin:@localhost:1521:xe";
+	private static final String dbURL = "jdbc:oracle:thin:@localhost:1521:orcl";
 	private static final String user = "SYSTEM";
 	private static final String password = "A123456a";
 
@@ -26,7 +26,7 @@ public class DBTest {
 //			res.next();
 			ViewTable vt = new ViewTable();
 			vt.viewTable(myconn, "Book");
-			vt.viewTable(myconn, "member");
+//			vt.viewTable(myconn, "member");
 		} catch (SQLException se) {
 			se.printStackTrace();
 		} finally {
