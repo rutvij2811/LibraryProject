@@ -1,4 +1,4 @@
-package db;
+package LibDBUtil;
 
 import java.util.ArrayList;
 

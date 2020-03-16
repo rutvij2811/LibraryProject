@@ -1,4 +1,4 @@
-package db;
+package LibDBUtil;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
