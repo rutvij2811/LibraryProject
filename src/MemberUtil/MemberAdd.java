@@ -1,4 +1,4 @@
-package test;
+package MemberUtil;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

@@ -5,10 +5,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+
+import lib.Book;
 
 public class DBTest {
 
-	private static final String dbURL = "jdbc:oracle:thin:@localhost:1521:orcl";
+	private static final String dbURL = "jdbc:oracle:thin:@localhost:1521:xe";
 	private static final String user = "SYSTEM";
 	private static final String password = "A123456a";
 
@@ -26,6 +29,13 @@ public class DBTest {
 //			res.next();
 			ViewTable vt = new ViewTable();
 			vt.viewTable(myconn, "Book");
+			
+			ListOfBooks lob = new ListOfBooks();
+			ArrayList<Book> bookList = lob.getBooks(myconn);
+			for(Book book: bookList) {
+				System.out.println(book);
+			}
+			
 //			vt.viewTable(myconn, "member");
 		} catch (SQLException se) {
 			se.printStackTrace();

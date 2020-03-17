@@ -1,11 +1,12 @@
+package main;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+import MemberUtil.MemberAdd;
+import MemberUtil.ViewMembers;
 import lib.Member;
-import test.MemberAdd;
-import test.ViewMembers;
 import lib.*;
 public class Main {
 	public static void main(String[] args) throws IOException {
