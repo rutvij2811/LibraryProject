@@ -1,13 +1,19 @@
 package main;
+
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+import LibDBUtil.DBConn;
+import LibDBUtil.ListOfBooks;
 import MemberUtil.MemberAdd;
 import MemberUtil.ViewMembers;
-import lib.Member;
 import lib.*;
+
 public class Main {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
@@ -30,8 +36,6 @@ public class Main {
 			switch (choice) {
 			case 1:
 				issueBook();
-				System.out.println("Enter the Book name");
-				String name = sc.nextLine();
 				break;
 			case 2:
 				issueBooks();
@@ -69,6 +73,14 @@ public class Main {
 
 	private static void issueBook() {
 		// TODO Auto-generated method stub
-
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Book name");
+		ArrayList<Book> bookList = ListOfBooks.getBooks(DBConn.myconn);
+		String name = sc.nextLine();
+		for (Book b : bookList) {
+			if (b.getName().equalsIgnoreCase(name) && !b.isIssued()) {
+				// code to issue book
+			}
+		}
 	}
 }

@@ -28,4 +28,10 @@ public class Book {
 				+ "Book Name: "+ name +"\n"
 						+ "Author: " + author + "\n";
 	}
+	public String getName() {
+		return name;
+	}
+	public boolean isIssued() {
+		return issued;
+	}
 }
